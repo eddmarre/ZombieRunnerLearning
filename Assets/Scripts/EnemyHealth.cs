@@ -9,7 +9,6 @@ public class EnemyHealth : MonoBehaviour
  public void ReduceHitPoints(float damage)
  {
      hitPoints-=damage;
-     print(hitPoints);//todo remove later
      if(hitPoints<=0)
      {
          Destroy(gameObject);
