@@ -77,4 +77,9 @@ public class EnemyAI : MonoBehaviour
         //slerp allows for a smoooth turn while rotating
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
+
+    public void OnDamageTaken()//string reference
+    {
+        isProvoked=true;
+    }
 }

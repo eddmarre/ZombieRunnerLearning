@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
 
  public void ReduceHitPoints(float damage)
  {
+     //only works for scripts on gameObject or children
+     BroadcastMessage("OnDamageTaken");
      hitPoints-=damage;
      if(hitPoints<=0)
      {
