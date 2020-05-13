@@ -2236,6 +2236,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804619101007445586, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 2065918459}
+    - target: {fileID: 3804619101007445586, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: FPSCamera
+      value: 
+      objectReference: {fileID: 2065918459}
+    - target: {fileID: 3804619101007445586, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: regularFOV
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804619101007445586, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: ADSFOV
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 9085218276785713665, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 3}
       propertyPath: gameOverCanvas
