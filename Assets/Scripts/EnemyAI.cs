@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     bool isProvoked = false;
     float enemyStoppingDistance = 2f;
     Animator animator;
+    [SerializeField] float turnSpeed=5f;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -33,6 +34,7 @@ public class EnemyAI : MonoBehaviour
     }
     void EngageTarget()
     {
+        FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             chaseTarget();
@@ -65,5 +67,14 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetBool("Attack", true);
         Debug.Log(name + "Attacking" + target.name);//todo delete later
+    }
+
+    void FaceTarget()
+    {
+        //normalized returns a value of 1 since we don't want to change the length of direction
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        //slerp allows for a smoooth turn while rotating
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 }
