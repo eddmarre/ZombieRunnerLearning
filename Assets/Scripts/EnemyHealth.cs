@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
- [SerializeField] float hitPoints=100f;
+    [SerializeField] float hitPoints = 100f;
 
- public void ReduceHitPoints(float damage)
- {
-     //only works for scripts on gameObject or children
-     BroadcastMessage("OnDamageTaken");
-     hitPoints-=damage;
-     if(hitPoints<=0)
-     {
-         Destroy(gameObject);
-     }
- }
+    public void ReduceHitPoints(float damage)
+    {
+        //only works for scripts on gameObject or children
+        BroadcastMessage("OnDamageTaken");
+        hitPoints -= damage;
+        if (hitPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

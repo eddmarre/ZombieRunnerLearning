@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8200000}
   - component: {fileID: 294334444}
   - component: {fileID: 9085218276785713665}
-  - component: {fileID: 3804619101007445586}
   - component: {fileID: 294334439}
   - component: {fileID: 294334440}
   m_Layer: 0
@@ -321,23 +320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &3804619101007445586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b961a9717a73c9b43af05d3150f2bde0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  regularFOV: 60
-  ADSFOV: 20
-  zoomOutSensitivity: 2
-  zoomInSensitivity: 0.5
-  FPSCamera: {fileID: 2000000}
 --- !u!114 &294334439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7148247933965678340}
+  - component: {fileID: 7222409916117880989}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -490,6 +473,37 @@ Transform:
   m_Father: {fileID: 400002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7222409916117880989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443423994861065795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c74dd339816a6f4a9dad9694be7b276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 0
+--- !u!114 &6097290729531526088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459750653101115584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b961a9717a73c9b43af05d3150f2bde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSCamera: {fileID: 2000000}
+  firstPersonController: {fileID: 11400000}
+  regularFOV: 60
+  ADSFOV: 20
+  zoomOutSensitivity: 2
+  zoomInSensitivity: 0.5
 --- !u!1001 &12651394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -580,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 8459750653105374018, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8459750653105676130, guid: ada2587319194f542957a8c2ae277cb9,
         type: 3}
@@ -608,8 +622,19 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 294334440}
+    - target: {fileID: 8930725858243457766, guid: ada2587319194f542957a8c2ae277cb9,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
+--- !u!1 &8459750653101115584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8459750653105374018, guid: ada2587319194f542957a8c2ae277cb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 12651394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8459750653101544672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8459750653105676130, guid: ada2587319194f542957a8c2ae277cb9,
@@ -633,6 +658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShotGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459750653105374018, guid: 684597af425909b4db7bb9a8146e7085,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8459750653105676130, guid: 684597af425909b4db7bb9a8146e7085,
         type: 3}
@@ -699,6 +729,11 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 294334440}
+    - target: {fileID: 8930725858243457766, guid: 684597af425909b4db7bb9a8146e7085,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684597af425909b4db7bb9a8146e7085, type: 3}
 --- !u!4 &2080149083287595939 stripped
@@ -774,6 +809,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.5080004
       objectReference: {fileID: 0}
+    - target: {fileID: 8930725858243457766, guid: 89040abf1694e4749803f4adc30046b0,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930725858243457766, guid: 89040abf1694e4749803f4adc30046b0,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: 8930725858243457766, guid: 89040abf1694e4749803f4adc30046b0,
+        type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 294334440}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89040abf1694e4749803f4adc30046b0, type: 3}
 --- !u!4 &525981714465964602 stripped

@@ -5,17 +5,16 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class WeaponZoom : MonoBehaviour
 {
+    [SerializeField] Camera FPSCamera;
+    [SerializeField] FirstPersonController firstPersonController;
+
+
     [SerializeField] float regularFOV = 60f;
     [SerializeField] float ADSFOV = 20f;
     [SerializeField] float zoomOutSensitivity = 2f;
     [SerializeField] float zoomInSensitivity = .5f;
-    [SerializeField] Camera FPSCamera;
-    bool zoomToggle = false;
-    FirstPersonController firstPersonController;
-    void Start()
-    {
-        firstPersonController = GetComponent<FirstPersonController>();
-    }
+        bool zoomToggle = false;
+    
     void Update()
     {
         CameraFOV();
@@ -29,14 +28,14 @@ public class WeaponZoom : MonoBehaviour
                 zoomToggle = true;
                 FPSCamera.fieldOfView = ADSFOV;
                 firstPersonController.m_MouseLook.XSensitivity = zoomInSensitivity;
-                firstPersonController.m_MouseLook.YSensitivity=zoomInSensitivity;
+                firstPersonController.m_MouseLook.YSensitivity = zoomInSensitivity;
             }
             else
             {
                 zoomToggle = false;
                 FPSCamera.fieldOfView = regularFOV;
-                firstPersonController.m_MouseLook.XSensitivity=zoomOutSensitivity;
-                firstPersonController.m_MouseLook.YSensitivity=zoomOutSensitivity;
+                firstPersonController.m_MouseLook.XSensitivity = zoomOutSensitivity;
+                firstPersonController.m_MouseLook.YSensitivity = zoomOutSensitivity;
 
             }
         }
