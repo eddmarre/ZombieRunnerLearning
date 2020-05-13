@@ -1271,6 +1271,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 452293728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1674524608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2592582874613068889, guid: 738ebdaaf5da31b4398171658745159a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2592582873066079129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1674524609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674524608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b57b85832bca2428915fecd11fef0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!1 &1714538789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2065918459}
   range: 100
+  WeaponDamage: 10
 --- !u!1001 &1983708475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1491,11 +1511,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 294334443}
-    - target: {fileID: 2592582874613068888, guid: 738ebdaaf5da31b4398171658745159a,
-        type: 3}
-      propertyPath: chaseRange
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2592582874613068889, guid: 738ebdaaf5da31b4398171658745159a,
         type: 3}
       propertyPath: m_Name
