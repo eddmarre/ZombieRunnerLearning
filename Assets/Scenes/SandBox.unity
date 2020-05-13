@@ -331,6 +331,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+--- !u!114 &294334440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294334438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a837cb0c9589f478f71e34097ae613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoAmount: 10
 --- !u!4 &294334443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -2538,6 +2551,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1565433837}
   hitEffect: {fileID: 6329537211182943627, guid: 878db02b8347d934a979b9b3a92ada61,
     type: 3}
+  ammoSlot: {fileID: 294334440}
 --- !u!1001 &1983708475
 PrefabInstance:
   m_ObjectHideFlags: 0
