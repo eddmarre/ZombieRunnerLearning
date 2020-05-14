@@ -73,7 +73,6 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
         animator.SetBool("Attack", true);
-        Debug.Log(name + "Attacking" + target.name);//todo delete later
     }
 
     void FaceTarget()
