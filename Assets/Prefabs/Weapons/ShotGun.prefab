@@ -216,6 +216,7 @@ MonoBehaviour:
   hitEffect: {fileID: 6329537211182943627, guid: 878db02b8347d934a979b9b3a92ada61,
     type: 3}
   ammoSlot: {fileID: 0}
+  ammoType: 1
 --- !u!1 &8459750653105374020
 GameObject:
   m_ObjectHideFlags: 0

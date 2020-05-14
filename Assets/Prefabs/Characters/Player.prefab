@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a837cb0c9589f478f71e34097ae613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoSlots: []
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenShots
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930725858243457766, guid: 684597af425909b4db7bb9a8146e7085,
+        type: 3}
+      propertyPath: ammoType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684597af425909b4db7bb9a8146e7085, type: 3}

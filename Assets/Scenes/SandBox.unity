@@ -2218,8 +2218,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: ammoAmount
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.data[0].ammoAmount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 294334440, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoAmount
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9085218276785713665, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 3}
