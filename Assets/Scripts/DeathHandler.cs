@@ -19,5 +19,6 @@ public class DeathHandler : MonoBehaviour
         Cursor.visible = true;
         //stop game time to prevent conflicts
         Time.timeScale = 0;
+        FindObjectOfType<WeaponSwithcer>().enabled=false;
     }
 }
