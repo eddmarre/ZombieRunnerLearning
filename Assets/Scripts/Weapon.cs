@@ -13,6 +13,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
 
     bool canShoot = true;
+    //when class is called enable this
+    void OnEnable()
+    {
+        canShoot=true;
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot == true)
