@@ -12,14 +12,14 @@ public class EnemyAI : MonoBehaviour
     Animator animator;
     [SerializeField] float turnSpeed = 5f;
     EnemyHealth health;
-    [SerializeField] Transform target;
+    Transform target;
     void Start()
     {
 
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = GetComponent<EnemyHealth>();
-        // target = FindObjectOfType<PlayerHealth>().transform;
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
 

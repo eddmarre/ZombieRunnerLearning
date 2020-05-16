@@ -17,5 +17,6 @@ public void AttackHitEvent()
         return;
     }
     target.ReducePlayerHealth(damage);
+    target.GetComponent<DisplayDamage>().ShowDamageImpact();
 }
 }
