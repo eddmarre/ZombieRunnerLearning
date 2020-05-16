@@ -4,29 +4,31 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;//float initializes at 0 so doing this prevents issue at start time
     bool isProvoked = false;
     float enemyStoppingDistance = 2f;
     Animator animator;
-    [SerializeField] float turnSpeed=5f;
+    [SerializeField] float turnSpeed = 5f;
     EnemyHealth health;
+    [SerializeField] Transform target;
     void Start()
     {
+
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        health=GetComponent<EnemyHealth>();
+        health = GetComponent<EnemyHealth>();
+        // target = FindObjectOfType<PlayerHealth>().transform;
     }
 
 
     void Update()
     {
-        if(health.IsDead())
+        if (health.IsDead())
         {
-            enabled=false;
-            navMeshAgent.enabled=false;
+            enabled = false;
+            navMeshAgent.enabled = false;
         }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (isProvoked)
@@ -86,6 +88,6 @@ public class EnemyAI : MonoBehaviour
 
     public void OnDamageTaken()//string reference
     {
-        isProvoked=true;
+        isProvoked = true;
     }
 }
